@@ -1,0 +1,27 @@
+.ProfileButton {
+  background-image: url(media/BlankProfile.png);
+  background-repeat: no-repeat;
+  background-position: center;a
+  background-size: 100%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+}
+
+.ProfileButton:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.ProfileName, .recieptno {
+  cursor: pointer;
+}
+
+.Profilemodal th, .profiltd {
+  padding-top: 5px;
+}
