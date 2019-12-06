@@ -1,0 +1,125 @@
+  body {
+    background-color:#e6e6e6;
+  }
+
+  .container {
+    padding-top: 20px;
+  }
+
+  .banner {
+    height: 100%;
+    background: linear-gradient(#FF9867, #FF6064);
+  }
+
+  .banner > img {
+    max-width: 100%;
+    max-height: 100vh;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+  }
+
+  #Specials {
+    display: flex;
+  }
+
+  #TopSales {
+    flex: 0 0 45%;
+    margin-right: 5%;
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+  }
+
+  #WhatsUp {
+    flex: 1;
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
+  }
+
+  #PencilContent, #PenContent {
+   background-color: white;
+   border-radius: 5%;
+   padding: 20px;
+   margin: 20px 0px;
+   position: relative;
+  }
+
+  .Topobject, .Whatobject, .Productobject{
+    width: 110px;
+    display: inline-block;
+  }
+
+  .Topobject > img , .Whatobject > img, .Productobject > img {
+    height:110px;
+    width:110px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+  }
+
+  .product {
+    text-align: center;
+    font-size:15px;
+    margin: auto;
+    padding: 5px 10px 5px;
+  }
+
+
+  .Sell {
+    height:220px;
+    width:220px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+  }
+
+  .description {
+    background-color:#E9E9E9;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    padding: 8px;
+  }
+
+  .producthover:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
+  .ViewMore {
+    color: #FF6064;
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .ViewMore:hover {
+    color: #FF9867
+  }
+
+  #Cart {
+    position: sticky;
+    float: right;
+    bottom: 20px;
+    background-color:green;
+    padding-top: 5px;
+    border: none;
+    border-radius: 15px;
+    margin-left:auto;
+    color:white;
+    font-weight:bold;
+    width:200px;
+    font-size:30px;
+    text-align:center
+  }
+
+  #Cart:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+    background-color:#44b869;
+  }
