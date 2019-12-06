@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+          body {
+      font-family: Trebuchet MS, sans-serif;
+
+    }
+
+    .SignInUpForm {
+      text-align: center;
+    }
+
+    button.link {
+      background:none; border:none;
+      font-size: 24px;
+      padding: 0px 40px 0px;
+     }
+
+    #login {
+      border-bottom: 2px solid orange;
+      color: orange;
+    }
+    label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #userName, #password {
+      padding: 12px 20px;
+      width: 25%;
+      border-radius: 5%;
+      border: 1px solid #ebebeb;
+    }
+
+    #signin {
+      border: none;
+      border-radius: 2%;
+      padding: 12px 12% 12px;
+      color: white;
+      font-size: 15px;
+      background: linear-gradient(#FF9867, #FF6064);
+    }
+    #subMenu1 {
+      font-size:30px;
+    }
+
+
+    </style>
+
+  </head>
+  <body>
+    <div class= "SignInUpForm">
+      <h2 class="Userhead" style="background-color: #404040; color: white; width: 25%; padding: 5px 10px; margin: 15px auto; border-style: solid; border-radius: 10px;" > CreatiTools </h2>
+        <button class="link" id="login" >Login</button>
+        <a href="signup.html"><button class="link" id="signup">Sign Up</button></a>
+        <br> <br>
+        <label for "username"> Username: </label> <div class="inputform">  <input type="text" name="username" id="userName" value=""> </div> <br>
+        <label for "password"> Password: </label> <div class="inputform">  <input type="password" name="password" id="password" value=""> </div> <br> <br>
+        <button id="signin" type="button">SIGN IN</button>
+    </div>
+  </body>
+  <div id="content" class="interior-page">
+    <center><a href="forgotpassword.html" id="subMenu1">Forgot Password?</a></center>
+  </div>
+
+</html>
