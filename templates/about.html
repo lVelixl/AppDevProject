@@ -1,57 +1,172 @@
 {% extends "base.html" %}
 {% block title %}About us{% endblock %}
 {% block content %}
+
 <head>
-  <link rel="stylesheet" href="./static/about.css">
+<style>
+  .itemCat table {
+  border: 10px solid #E9E9E9;
+  font-size: 100px;
+
+  margin-right: auto;
+  width: auto;
+  background-color: #E9E9E9;}
+
+  .itemCat th {
+  font-size:25px;
+  background-color: lightgray;}
+
+  .itemCat td {
+  text-align: center;
+  border: 10px solid #E9E9E9;
+  background-color:white;
+  font-size:15px;
+  margin: auto
+  }
+
+  .itemCat img {
+  height:220px;
+  width:220px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  #edit {
+  text-align: center;
+  background-color: gray;
+  color:white;
+  width: 50px;
+  font-size: 15px;
+  font-weight: normal
+  }
+
+  .nothing {
+  height: 220px;
+  width: 220px;
+  background-color: lightgray
+  }
+
+  </style>
 </head>
-<h1 class="display-4">About Us</h1>
-<div class="container">
-  <div class="itemCat">
+<body>
 
-  <table style="margin-left:auto;margin-right:auto;text-align:left">
-    <th colspan=9999 style="width:1100px"> Staff Information </th>
+<!-- TABLE -->
+<div class="tab-content">
+  <div class="tab-pane container-fluid active" id="DIT">
+      <br>
+      <h2>Our Staff</h2>
+      <br>
+      <table class="table table-striped">
+         <thead>
+             <tr>
+                 <th>Name</th>
+                 <th>Role</th>
+                 <th>Email</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ms. Jasmine Ng</td>
+                <td>Module Leader</td>
+                <td><a href="mailto:jasmine_ng@nyp.edu.sg">jasmine_ng@nyp.edu.sg</a></td>
+            </tr>
+            <tr>
+                <td>Ms. Chua Li Chien</td>
+                <td>Module Tutor</td>
+                <td><a href="mailto:CHUA_LI_CHIEN@myaccount.nyp.edu.sg">CHUA_LI_CHIEN@myaccount.nyp.edu.sg</a></td>
+            </tr>
+            <tr>
+                <td>Mr. Lee Chit Boon</td>
+                <td>Module Tutor</td>
+                <td><a href="mailto:lee_chit_boon@nyp.edu.sg">lee_chit_boon@nyp.edu.sg</a></td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
 
-      <tr style="font-weight:bold">
-        <td> Name </td>
-        <td> Contact No. </td>
-        <td> Email </td>
-        <td> Address </td>
-        <td> Job Title </td>
-      </tr>
+  <div class="tab-pane container fade" id="DBA">
+      <br>
+      <h2>Our Staff</h2>
+      <br>
+      <table class="table table-striped">
+         <thead>
+             <tr>
+                 <th>Name</th>
+                 <th>Role</th>
+                 <th>Email</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mr. Alvin Tay</td>
+                <td>Module Leader</td>
+                <td><a href="mailto:jasmine_ng@nyp.edu.sg">alvin_tay@nyp.edu.sg</a></td>
+            </tr>
+            <tr>
+                <td>Ms. Chua Li Chien</td>
+                <td>Module Tutor</td>
+                <td><a href="mailto:CHUA_LI_CHIEN@myaccount.nyp.edu.sg">CHUA_LI_CHIEN@myaccount.nyp.edu.sg</a></td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
 
-      <tr>
-        <td> Bob </td>
-        <td> 90112233 </td>
-        <td> bobby@creati.com </td>
-        <td> 441C Sengkang Road #07-11 SS999441 </td>
-        <td> Data Analyst </td>
-      </tr>
-      <tr>
-        <td> Amanda </td>
-        <td> 92334455 </td>
-        <td> amanda@creati.com </td>
-        <td> 8 Ang Mo Kio Street #01-11 S999008 </td>
-        <td> Marketing Coordinator </td>
-      </tr>
-      <tr>
-        <td> John </td>
-        <td> 91223344 </td>
-        <td> john@creati.com </td>
-        <td> 999 Yio Chu Kang Avenue #07-11 5111999 </td>
-        <td> Data Analyst </td>
-      </tr>
-    <br>
-  </table>
+  <div class="tab-pane container fade" id="DSF">
+      <br>
+      <h2>Our Staff</h2>
+      <br>
+      <table class="table table-striped">
+         <thead>
+             <tr>
+                 <th>Name</th>
+                 <th>Role</th>
+                 <th>Email</th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ms. Jasmine Ng</td>
+                <td>Module Leader</td>
+                <td><a href="mailto:jasmine_ng@nyp.edu.sg">jasmine_ng@nyp.edu.sg</a></td>
+            </tr>
+            <tr>
+                <td>Ms. Verawaty</td>
+                <td>Module Tutor</td>
+                <td><a href="mailto:CHUA_LI_CHIEN@myaccount.nyp.edu.sg">verawaty@nyp.edu.sg</a></td>
+            </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
 
   <br>
 
-  <table style="margin-left:auto;margin-right:auto;text-align:center">
-    <div id="edit" style="margin-left:auto;margin-right:auto"> Edit </div>
+<!--  <table style="margin-left:auto;margin-right:auto;text-align:center">
     <th colspan=9999 style="text-align:center"> Our Agenda </th>
       <tr>
         <td style="height:auto;width:1100px;background-color: #E9E9E9;font-size:18px">
           We aim to provide stationery digitally for our consumers, cater to everyone.
         </td>
       </tr>
-  </table>
+  </table> -->
+
+<div class="tab-content">
+  <div class="tab-pane container-fluid active" id="DBA">
+      <br>
+      <h2>Our Agenda</h2>
+      <br>
+      <table class="table table-striped">
+         <thead>
+             <tr>
+                 <th style="font-size:20px">We aim to provide stationery digitally for our consumers, cater to everyone.</th>
+             </tr>
+        </thead>
+      </table>
+  </div>
+</div>
+
+      <br><br><br>
+
+</body>
+
 {% endblock %}
