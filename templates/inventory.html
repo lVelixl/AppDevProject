@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Inventory System{% endblock %}
+{% block content %}
+{% from "include/_formHelper.html" import render_field %}
+<style>
+.inv td:nth-child(3), .inv td:nth-child(5), .inv td:nth-child(7), .inv th:nth-child(3), .inv th:nth-child(5), .inv th:nth-child(7) {
+border-left: 1px solid #ddd;
+}
+</style>
+
+<table class="base inv" border="0" align="center">
+    <thead>
+    <tr>
+        <th colspan="2"></th>
+        <th style="border-left: 1px solid #ddd;" colspan="2">Stock</th>
+        <th style="border-left: 1px solid #ddd;" colspan="2">Price</th>
+        <th style="border-left: 1px solid #ddd;"></th>
+    </tr>
+    <tr>
+        <th>Index</th>
+        <th>Product</th>
+        <th>Current</th>
+        <th>Sold</th>
+        <th>Cost</th>
+        <th>Selling</th>
+        <th>Profit</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for good in stockList %}
+        <tr>
+            <td>{{ good.get_stockID() }}</td>
+            <td>{{ good.get_name() }}</td>
+            <td>{{ good.get_currentStock() }}</td>
+            <td>{{ good.get_soldStock() }}</td>
+            <td>${{ "%.2f" % good.get_costPrice() }}</td>
+            <td>${{ "%.2f" % good.get_sellingPrice() }}</td>
+            <td>{{ good.get_profit() }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<button class="base" type="button" onclick="window.location.href='/importForm'">Import</button>
+
+{% endblock %}

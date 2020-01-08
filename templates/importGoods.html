@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}CreatiTools - Importing Goods{% endblock %}
+
+{% block content %}
+{% from "include/_formHelper.html" import render_field %}
+
+<h1 class="display-4">Import Goods</h1>
+<form method="POST" action="">
+    <div class="form-group">
+        {{ render_field(form.brand, class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ render_field(form.productName, class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ render_field(form.quantity, class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ render_field(form.costPrice, class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ render_field(form.sellPrice, class="form-control") }}
+    </div>
+    <input type="submit" value="Confirm Import" class="btn btn-primary"/>
+</form>
+{% endblock %}
