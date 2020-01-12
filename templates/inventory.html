@@ -15,6 +15,8 @@ border-left: 1px solid #ddd;
         <th style="border-left: 1px solid #ddd;" colspan="2">Stock</th>
         <th style="border-left: 1px solid #ddd;" colspan="2">Price</th>
         <th style="border-left: 1px solid #ddd;"></th>
+        <th style="width:50px;"></th>
+        <th></th>
     </tr>
     <tr>
         <th>Index</th>
@@ -24,6 +26,8 @@ border-left: 1px solid #ddd;
         <th>Cost</th>
         <th>Selling</th>
         <th>Profit</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -36,6 +40,10 @@ border-left: 1px solid #ddd;
             <td>${{ "%.2f" % good.get_costPrice() }}</td>
             <td>${{ "%.2f" % good.get_sellingPrice() }}</td>
             <td>{{ good.get_profit() }}</td>
+            <td><button onclick= "window.location.href='/updateStockInfo/{{good.get_stockID()}}'" class="base">Update</button></td>
+            <td><form action="{{url_for('deleteStock', id=good.get_stockID())}}" method="POST">
+                    <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete stock with ID {{good.get_stockID()}}?')">
+                </form></td>
         </tr>
     {% endfor %}
     </tbody>
