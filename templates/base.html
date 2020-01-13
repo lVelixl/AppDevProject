@@ -12,8 +12,12 @@
     {% block navbar %}
         {% if cookieDict["cookie"].endswith("creatitools.org") %}
             {% include 'include/_navbar_staff.html' %}
+            {% include 'include/_cart_modal.html' %}
+            {% include 'include/_profile_modal.html' %}
         {% elif cookieDict["cookie"].endswith(".com") %}
             {% include 'include/_navbar_user.html' %}
+            {% include 'include/_cart_modal.html' %}
+            {% include 'include/_profile_modal.html' %}
         {% else %}
             {% include 'include/_navbar.html' %}
         {% endif %}
