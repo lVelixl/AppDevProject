@@ -27,6 +27,7 @@ class Inventory():
         self.__costPrice = cost_price
         self.__sellingPrice = selling_price
         self.__profit = 0
+        self.__image = ""
 
     def get_stockID(self):
         return self.__stockID
@@ -49,9 +50,12 @@ class Inventory():
     def get_profit(self):
         return self.__profit
 
+    def get_image(self):
+        return self.__image
+
     def set_name(self, brand, productName):
         name = (brand + " " + productName).split()
-        self.__name = " ".join(name)
+        self.__name = " ".join(name).title()
 
     def set_currentStock(self, currentStock):
         self.__currentStock = currentStock
@@ -72,3 +76,6 @@ class Inventory():
 
     def set_profit(self):
         self.__profit = (self.__soldStock * self.__sellingPrice) - (self.__currentStock + self.__soldStock) * self.__costPrice
+
+    def set_image(self, image):
+        self.__image = image
