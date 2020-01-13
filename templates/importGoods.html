@@ -5,7 +5,11 @@
 {% from "include/_formHelper.html" import render_field %}
 
 <h1 class="display-4">Import Goods</h1>
-<form method="POST" action="">
+<form method="POST" action="" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select image: </label><br>
+        <input style="font-size:16px;" type="file" name="file" id="file" class="" accept="image/*" required>
+    </div>
     <div class="form-group">
         {{ render_field(form.brand, class="form-control") }}
     </div>
@@ -22,6 +26,6 @@
         {{ render_field(form.sellPrice, class="form-control") }}
     </div>
     <input type="submit" value="Confirm Import" class="btn btn-primary"/>
-    <input type="button" value="Cancel Import" class="btn btn-danger" onclick="window.location.href='inventory'">
+    <input type="button" value="Cancel Import" class="btn btn-danger" onclick="window.location.href='{{ url_for('inventory') }}'">
 </form>
 {% endblock %}
