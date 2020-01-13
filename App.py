@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import shelve, cookie, Forms
+import shelve, cookie, Forms, base64
 import inventory as inv
 from Forms import importForm
 
@@ -40,6 +40,8 @@ def importFormPage():
         db = shelve.open("inventory.db", "c")
         invDict = db["inventory"]
         good = inv.Inventory(ImportForm.brand.data, ImportForm.productName.data, ImportForm.quantity.data, ImportForm.costPrice.data, ImportForm.sellPrice.data)
+        image = base64.b64encode(request.files["file"].read())
+        good.set_image(image)
         invDict[good.get_stockID()] = good
         db["inventory"] = invDict
         db.close()
@@ -56,6 +58,9 @@ def updateStockInfo(id):
         db = shelve.open("inventory.db", "w")
         invDict = db["inventory"]
         stock = invDict.get(id)
+        if request.files:
+            image = base64.b64encode(request.files["file"].read())
+            stock.set_image(image)
         brand = stock.get_name().split(" ", 1)[0]
         stock.set_name(brand, updateStockInfoForm.productName.data)
         stock.set_currentStock(updateStockInfoForm.currentStock.data)
